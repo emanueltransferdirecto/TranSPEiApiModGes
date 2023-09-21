@@ -14,9 +14,9 @@ namespace TranSPEiApiModGes.Infrastructure.Presistence;
 
 public class CustomersRepository : ICustomerRepository
 {
-    private readonly DapperContext _context;
+    private readonly ApplicationContext _context;
 
-    public CustomersRepository(DapperContext context)
+    public CustomersRepository(ApplicationContext context)
     {
         _context = context;
     }

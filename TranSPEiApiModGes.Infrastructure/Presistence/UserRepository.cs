@@ -8,9 +8,9 @@ namespace TranSPEiApiModGes.Infrastructure.Presistence;
 
 public class UserRepository : IUserRepository
 {
-    private readonly DapperContext _context;
+    private readonly ApplicationContext _context;
 
-    public UserRepository(DapperContext context)
+    public UserRepository(ApplicationContext context)
     {
         _context = context;
     }

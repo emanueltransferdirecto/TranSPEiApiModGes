@@ -44,10 +44,10 @@ public static class DependencyInjection
     public static IServiceCollection AddContext(
         this IServiceCollection services, ConfigurationManager configuration)
     {
-        var DapperSettings = new DapperSettings();
-        configuration.Bind(DapperSettings.SectionName, DapperSettings);
-        services.AddSingleton(Options.Create(DapperSettings));
-        services.AddSingleton<DapperContext>();
+        var applicationSettings = new ApplicationSettings();
+        configuration.Bind(ApplicationSettings.SectionName, applicationSettings);
+        services.AddSingleton(Options.Create(applicationSettings));
+        services.AddSingleton<ApplicationContext>();
 
         return services;
     }

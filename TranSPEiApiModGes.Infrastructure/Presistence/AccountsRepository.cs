@@ -9,9 +9,9 @@ namespace TranSPEiApiModGes.Infrastructure.Presistence;
 
 public class AccountsRepository : IAccountsRepository
 {
-    private readonly DapperContext _context;
+    private readonly ApplicationContext _context;
 
-    public AccountsRepository(DapperContext context)
+    public AccountsRepository(ApplicationContext context)
     {
         _context = context;
     }

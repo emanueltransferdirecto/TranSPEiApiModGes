@@ -7,9 +7,9 @@ namespace TranSPEiApiModGes.Infrastructure.Presistence;
 
 public class DispositionRepository : IDispositionRepository
 {
-    private readonly DapperContext _context;
+    private readonly ApplicationContext _context;
 
-    public DispositionRepository(DapperContext context)
+    public DispositionRepository(ApplicationContext context)
     {
         _context = context;
     }

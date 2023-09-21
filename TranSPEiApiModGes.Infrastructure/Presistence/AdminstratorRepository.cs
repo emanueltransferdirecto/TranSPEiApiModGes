@@ -10,9 +10,9 @@ namespace TranSPEiApiModGes.Infrastructure.Presistence;
 
 public class AdminstratorRepository : IAdminstratorRepository
 {
-    private readonly DapperContext _context;
+    private readonly ApplicationContext _context;
 
-    public AdminstratorRepository(DapperContext context)
+    public AdminstratorRepository(ApplicationContext context)
     {
         _context = context;
     }

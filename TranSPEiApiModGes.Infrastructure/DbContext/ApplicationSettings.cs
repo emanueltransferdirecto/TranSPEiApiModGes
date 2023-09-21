@@ -1,10 +1,10 @@
 ﻿using System;
 namespace TranSPEiApiModGes.Infrastructure.Presistence;
 
-public class DapperSettings
+public class ApplicationSettings
 {
     public const string SectionName = "ConnectionStrings";
 
-    public string SqlServer { get; set; } = null!;
+    public string MySQL { get; set; } = null!;
 }
 

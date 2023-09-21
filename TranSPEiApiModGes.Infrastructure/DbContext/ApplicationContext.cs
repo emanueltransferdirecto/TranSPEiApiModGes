@@ -4,20 +4,21 @@ using System.Data.SqlClient;
 using TranSPEiApiModGes.Infrastructure.Presistence;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using MySqlConnector;
 
 namespace TranSPEiApiModGes.Infrastructure;
 
-public class DapperContext
+public class ApplicationContext
 {
-    private readonly DapperSettings _dapperSettings;
+    private readonly ApplicationSettings _applicationSettings;
 
-    public DapperContext(IOptions<DapperSettings> DapperSettings)
+    public ApplicationContext(IOptions<ApplicationSettings> Application)
     {
-        _dapperSettings = DapperSettings.Value;
+        _applicationSettings = Application.Value;
     }
 
     public IDbConnection CreateConnection()
-        => new SqlConnection(_dapperSettings.SqlServer);
+        => new MySqlConnection(_applicationSettings.MySQL);
 
 }
 

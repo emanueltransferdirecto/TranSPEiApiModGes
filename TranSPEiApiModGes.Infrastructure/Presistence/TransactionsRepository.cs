@@ -10,9 +10,9 @@ namespace TranSPEiApiModGes.Infrastructure.Presistence;
 
 public class TransactionsRepository : ITransactionsRepository
 {
-    private readonly DapperContext _context;
+    private readonly ApplicationContext _context;
 
-    public TransactionsRepository(DapperContext context)
+    public TransactionsRepository(ApplicationContext context)
     {
         _context = context;
     }
